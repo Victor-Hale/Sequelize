@@ -16,6 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         targetKey: 'id',
         onDelete: 'CASCADE' // 当 rooms 表中的记录被删除时，自动删除 room_rates 中的关联记录
       });
+      room_rates.belongsTo(models.orders, {
+        foreignKey: 'order_id',
+        targetKey: 'id',
+        onDelete: 'SET NULL' // 当 orders 表中的记录被删除时，此数据直接设置为空
+      });
     }
   }
 
@@ -31,6 +36,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER(10),
       allowNull: false,
       comment: '房源ID'
+    },
+    order_id: {
+      type: DataTypes.INTEGER(10),
+      allowNull: true,
+      comment: '订单ID'
     },
     rate: {
       type: DataTypes.INTEGER,

@@ -19,6 +19,16 @@ module.exports = {
         },
         comment: '房源ID'
       },
+      order_id: {
+        type: Sequelize.INTEGER(10),
+        allowNull: true,
+        references: {
+          model: 'orders',
+          key: 'id'
+        },
+        onDelete: 'SET NULL',
+        comment: '订单ID'
+      },
       rate: {
         type: Sequelize.INTEGER,
         allowNull: false,

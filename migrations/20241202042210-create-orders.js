@@ -15,6 +15,11 @@ module.exports = {
         allowNull: false,
         comment: '用户标识'
       },
+      order_price: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        comment: '房源价格'
+      },
       order_user_name: {
         type: Sequelize.STRING(50),
         allowNull: false,

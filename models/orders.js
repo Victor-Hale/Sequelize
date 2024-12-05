@@ -43,6 +43,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       comment: '用户标识'
     },
+    order_price: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      comment: '房源价格'
+    },
     order_user_name: {
       type: DataTypes.STRING(50),
       allowNull: false,

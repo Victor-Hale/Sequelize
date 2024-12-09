@@ -52,6 +52,7 @@ module.exports = {
       },
       order_status_id: {
         type: Sequelize.INTEGER,
+        defaultValue: 1,
         allowNull: false,
         comment: '订单状态ID'
       },

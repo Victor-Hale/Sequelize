@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     order_status_id: {
       type: DataTypes.INTEGER,
+      defaultValue: 1,
       allowNull: false,
       comment: '订单状态ID'
     },

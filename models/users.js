@@ -32,6 +32,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       comment: '用户登录密码'
     },
+    status: {
+      type: DataTypes.INTEGER,
+      defaultValue: 1,
+      allowNull: false,
+      comment: '状态'
+    },
     created_at: {
       type: DataTypes.DATE,
       allowNull: false,

@@ -21,6 +21,12 @@ module.exports = {
         allowNull: false,
         comment: '商家登录密码'
       },
+      status: {
+        type: Sequelize.INTEGER,
+        defaultValue: 1,
+        allowNull: false,
+        comment: '状态'
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
